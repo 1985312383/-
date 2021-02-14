@@ -26,3 +26,6 @@ None
 2.  Create Dev_ branch
 3.  Commit your code
 4.  Create Pull Request
+
+####Source of inspiration
+[BullshitGenerator](https://github.com/menzi11/BullshitGenerator)
