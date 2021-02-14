@@ -1,10 +1,13 @@
 # 胡编乱造论文生成器
 
 #### Description
-顾名思义，胡编乱造论文生成器
-根据题目和类型，胡编乱造一篇论文
-仅用于GUI显示测试，纯属搞笑，勿作他用
-如有恶果，概不负责
+As the name implies, make up a paper generator
+
+According to the title and type, make up a paper
+
+Only for GUI display test, purely funny, do not use it for other purposes
+
+If there are bad results, we are not responsible
 
 #### Software Architecture
 None
