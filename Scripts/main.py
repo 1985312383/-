@@ -4,6 +4,17 @@ import random
 import readJSON
 
 data = readJSON.readJson("data.json")
+bosh = data['boshi']
+
+
+def randomSentence(boshi):
+    while True:
+        random.shuffle(list(boshi))
+        for j in list(boshi):
+            return str(j)
+
+
+next_boshi = randomSentence(bosh)
 
 
 def get_another_passage():
@@ -14,11 +25,11 @@ def get_another_passage():
 
 
 def call_the_subject_again():
-    pass
+    return " "
 
 
 def get_subject_content():
-    pass
+    return " "
 
 
 if __name__ == "__main__":
@@ -34,6 +45,6 @@ if __name__ == "__main__":
             elif segmentationProbability < 20:  # 再次称述主题的概率
                 tmp += call_the_subject_again()
             elif segmentationProbability < 100:  # 胡编乱造的主要内容
-                tmp += get_subject_content()
+                tmp += next(randomSentence(next_boshi))
         tmp = tmp.replace("i", theme)
         print(tmp)
