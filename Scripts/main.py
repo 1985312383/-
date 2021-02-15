@@ -1,10 +1,16 @@
 import os
 import re
 import random
+import readJSON
+
+data = readJSON.readJson("data.json")
 
 
 def get_another_passage():
-    pass
+    another_passage = ". "
+    another_passage += "\r\n"
+    another_passage += "    "
+    return another_passage
 
 
 def call_the_subject_again():
@@ -27,7 +33,7 @@ if __name__ == "__main__":
                 tmp += get_another_passage()
             elif segmentationProbability < 20:  # 再次称述主题的概率
                 tmp += call_the_subject_again()
-            elif segmentationProbability < 100:
+            elif segmentationProbability < 100:  # 胡编乱造的主要内容
                 tmp += get_subject_content()
         tmp = tmp.replace("i", theme)
         print(tmp)
