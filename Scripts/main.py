@@ -2,6 +2,7 @@ import os
 import re
 import random
 import readJSON
+import jieba
 
 data = readJSON.readJson("data.json")
 nonsense = data['nonsense']
@@ -21,8 +22,7 @@ random_abstract = randomSentence(abstract)
 
 
 def get_another_passage():
-    another_passage = ". "
-    another_passage += "\r\n"
+    another_passage = "\r\n"
     another_passage += "    "
     return another_passage
 
@@ -37,10 +37,19 @@ def get_subject_content():
 
 def get_content():
     tmp = str()  # 存放生成的文字
-    tmp += "摘要\n"
-    tmp += next(random_abstract) + "\n"# 摘要
 
-    tmp += "正文\n"
+    # 添加摘要
+    tmp += "摘要\n"
+    tmp += next(random_abstract) + "\n" # 摘要
+
+    # 添加关键字
+    tmp += "关键字\n   "
+    keyword = jieba.lcut(theme)
+    tmp += " ".join(keyword)
+    tmp += "\n"
+
+    # 添加正文
+    tmp += "正文\n    "
     while len(tmp) < words:
         segmentationProbability = random.randint(0, 100)  # 下一句话的形式生成的概率
         if segmentationProbability < 5:  # 另起一段的概率为5%
