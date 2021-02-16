@@ -82,13 +82,15 @@ def get_content():
     for i in range(4):
         tmp += "\t" + next(random_acknowledge) + "\n"
 
+    # 替换全文的主题i
+    tmp = tmp.replace("i", theme)
+
     # 添加引用
     tmp += "引用\n"
     for i in range(8):
         tmp += "\t" + "[" + str(i + 1) + "] " + next(random_reference) + ".\n"
 
-    # 替换全文的主题i，并且打印全文
-    tmp = tmp.replace("i", theme)
+    # 打印全文
     print(tmp)
 
 
