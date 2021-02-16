@@ -1,4 +1,4 @@
-# 胡编乱造论文生成器
+# The generator of random papers
 
 #### Description
 As the name implies, make up a paper generator
@@ -30,3 +30,7 @@ None
 #### Source of inspiration
 
 [BullshitGenerator](https://github.com/menzi11/BullshitGenerator)
+
+#### Effect preview
+
+![img.png](img.png)

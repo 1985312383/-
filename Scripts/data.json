@@ -1,26 +1,39 @@
 {
   "title": "生存还是毁灭，这是一个问题",
   "abstract": [
-    "本课题i，被建立在xxx的背景上，其现实意义是提高了xxx，降低了xxx，减缓了xxx，使得xxx。",
-    "当今世界，正经历着百年未有之大变局，在全球经济化的潮流下，i的实际意义就更为重要。"
+    "本文着重介绍了i的结构和设计，它和现有的i比较，在结构和功能上有一些改动和创新，同时设计xxx部分，并且在xxx上使用近来十分流行的xxx。本次设计对机构尺寸的选择，强度刚度的校核计算，都给出了详细的说明，还包括控制接线图和完整程序代码，以及模型图，并绘制CAD图纸。"
   ],
   "introduction": [
-    ""
+    "本课题i，被建立在xxx的背景上，其现实意义是提高了xxx，降低了xxx，减缓了xxx，使得xxx。",
+    "当今世界，正经历着百年未有之大变局，在全球经济化的潮流下，i的实际意义就更为重要。"
   ],
   "text": [
     ""
   ],
   "conclusion": [
-    ""
+    "阐明了……机制，研究了……,为了……的目的，故，我们在此基础上开展了……\n结果表明……本研究的结果意味着……"
   ],
   "acknowledge": [
-    ""
+    "张三",
+    "李四",
+    "王五",
+    "赵六",
+    "钱七"
   ],
   "appendix": [
     ""
   ],
   "reference": [
-    ""
+    "杨可桢等.机械设计基础.北京：高等教育出版社,2006",
+    "裘文言、瞿元赏 [M]机械制图（第二版）高等教育出版社 2009",
+    "甘永立 [M]几何量公差与检测（第十版）上海科学技术出版社 2013",
+    "濮良贵，陈国定，吴立言.机械设计[M].第九版，高等教育出版社，2013",
+    "陈秀宁，施高义.机械设计课程设计[M].第四版，浙江大学出版社，2016",
+    "Karunamoorthi R.,Tiwari Mohit,Tiwari Tripti,Kuruva Radha,Sharma Arvind K.,Jemimah Carmichael M.,Manjunath T.C.. Design and development of IoT based home computerization using Raspberry pi[J]. Materials Today: Proceedings,2020(prepublish)",
+    "Home automation using general purpose household electric appliances with Raspberry Pi and commercial smartphone.[J]. PloS one,2020,15(9)",
+    "[何静如.基于树莓派的多功能智能家居系统[J].物联网技术,2018,8(02):96-99+102",
+    "吴月滢,郭旭焱,蔡红.基于BIM技术的外窗保温构造新设计[J].工程质量,2020,38(05):94-98",
+    "Raspberry Pi 基金会.Teach, Learn, and Make with Raspberry Pi[EB/OL].https://www.raspberrypi.org/,2021-1-31"
   ],
   "nonsense": [
     "现在, 解决i的问题, 是非常非常重要的。 所以, ",

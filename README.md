@@ -31,3 +31,7 @@
 #### 灵感来源
 
 [狗屁不通文章生成器](https://github.com/menzi11/BullshitGenerator)
+
+#### 效果预览
+
+![img.png](img.png)
