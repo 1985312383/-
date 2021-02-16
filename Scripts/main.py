@@ -4,17 +4,18 @@ import random
 import readJSON
 
 data = readJSON.readJson("data.json")
-bosh = data['boshi']
+nonsense = data['nonsense']
 
 
-def randomSentence(boshi):
+# 随机调用各data中的句子
+def randomSentence(content):
     while True:
-        random.shuffle(list(boshi))
-        for j in list(boshi):
-            return str(j)
+        random.shuffle(list(content))
+        for j in list(content):
+            yield j
 
 
-next_boshi = randomSentence(bosh)
+next_nonsense = randomSentence(nonsense)
 
 
 def get_another_passage():
@@ -45,6 +46,6 @@ if __name__ == "__main__":
             elif segmentationProbability < 20:  # 再次称述主题的概率
                 tmp += call_the_subject_again()
             elif segmentationProbability < 100:  # 胡编乱造的主要内容
-                tmp += next(randomSentence(next_boshi))
+                tmp += next(next_nonsense)
         tmp = tmp.replace("i", theme)
         print(tmp)
