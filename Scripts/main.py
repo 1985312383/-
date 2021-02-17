@@ -16,8 +16,8 @@ reference = data['reference']
 # 随机调用各data中的句子
 def randomSentence(content):
     while True:
-        random.shuffle(list(content))
-        for j in list(content):
+        random.shuffle(content)
+        for j in content:
             yield j
 
 
