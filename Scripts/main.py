@@ -29,13 +29,13 @@ random_reference = randomSentence(reference)
 
 
 def get_another_passage():
-    another_passage = "\r\n"
+    another_passage = "\n"
     another_passage += "\t"
     return another_passage
 
 
 def call_the_subject_again():
-    return " "
+    return ""
 
 
 def get_subject_content():
@@ -50,13 +50,15 @@ def get_content():
     tmp += "标题：" + theme + "\n"
 
     # 添加摘要
-    tmp += "摘要\n"
+    tmp += "摘要\n\t"
     tmp += next(random_abstract) + "\n"  # 摘要
 
     # 添加关键字
     tmp += "关键字\n   "
     keyword = jieba.lcut(theme)
-    tmp += " ".join(keyword)
+    for i in range(len(keyword)):
+        if len(keyword[i]) >= 2:
+            tmp += " " + keyword[i]
     tmp += "\n"
 
     # 添加引言
@@ -65,14 +67,19 @@ def get_content():
 
     # 添加正文
     tmp += "正文\n\t"
+
+    next_passage = False  # 是否需要再起下一段，如果上一句已经是另起一段，则该参数为真
     while len(tmp) < words:
         segmentationProbability = random.randint(0, 100)  # 下一句话的形式生成的概率
-        if segmentationProbability < 5:  # 另起一段的概率为5%
+        if segmentationProbability < 5 and next_passage is False:  # 另起一段的概率为5%
             tmp += get_another_passage()
-        elif segmentationProbability < 20:  # 再次称述主题的概率
+            next_passage = True
+        elif segmentationProbability < 20:  # 再次称述主题的概率,还没写函数
             tmp += call_the_subject_again()
+            next_passage = False
         elif segmentationProbability < 100:  # 胡编乱造的主要内容
             tmp += next(next_nonsense)
+            next_passage = False
     tmp += "\n"
 
     # 添加结论or结束语
@@ -107,11 +114,13 @@ if __name__ == "__main__":
     tmp = get_content()
 
     # 输出TXT文件
+    txt = ""
     while txt != "y" or "n":
         txt = input("是否生成txt文件在当前目录下？(y/n)")
         if txt == "y":
             file = open('论文.txt', 'w')
             file.write(tmp)
+            break
         elif txt == "n":
             break
         else:
